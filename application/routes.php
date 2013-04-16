@@ -32,10 +32,11 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home.bp_index');
-});
+Route::any('/', 'main@home');
+
+Route::any('/about','main@about');
+
+Route::controller('main');
 
 /*
 |--------------------------------------------------------------------------
